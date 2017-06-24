@@ -32,7 +32,8 @@ $(document).ready ( function () {
         "background":"#FFFFFF", \
         "foreground": "#074650", \
         "tableAccent": "#fe6db6" \
-        }';
+    }';
+        break;
     case "valentine":
         inp = '{ \
         "name": "Valentine\'s Day", \
