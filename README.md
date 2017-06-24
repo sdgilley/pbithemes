@@ -1,3 +1,2 @@
 # pbithemes
-Visualize and modify Power BI Report Themes
-See https://sdgilley.github.io/pbithemes/
+Visualize and modify Power BI Report Themes at https://sdgilley.github.io/pbithemes/
