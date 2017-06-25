@@ -33,3 +33,6 @@ body {
    .panel-info {
       border-color: #ccc;
    }
+.x {
+    cursor:pointer;
+}

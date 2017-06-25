@@ -63,11 +63,14 @@ $(document).ready(function () {
 
     // addCell button adds another data cell
     $("#addCell").click(function () {
-        var newcell = '<div class="col-xs-4"><input type="text" class="choose data form-control"  value="#FFFFFF" /></div>';
+        var tstart = '<div class="input-group col-xs-4">'
+        var tend = ' <span class="input-group-addon x" >&times;</span></div>'
+        var newcell = tstart + '<input type="text" class="choose data form-control"  value="#FFFFFF" />' + tend;
         $("#data").append(newcell); //add the new cell
         applyColors(); //make cells show their colors
         generate(); //generate the json text area 
     });
+
 
     function loadTheme(theme) {
         // creates the text input cells and uses its value for background color
@@ -82,14 +85,18 @@ $(document).ready(function () {
         fg = fg + '<input type="text"  id="fg" class="choose form-control"  value=" ' + theme.foreground + '"/>';
         var ta = '<label  for="ta">Table Accent </label>';
         ta = ta + '<input type="text" id="ta" class="choose form-control"  value=" ' + theme.tableAccent + '"/>';
+        
         $("#bgdiv").html(bg);
         $("#fgdiv").html(fg);
         $("#tadiv").html(ta);
 
         //data colors section - build a cell for each value
         var dc = "";
+        var tstart = '<div class="input-group col-xs-4">'
+        var tend = ' <span class="input-group-addon x" >&times;</span></div>'
+        
         $.each(theme.dataColors, function (index, value) {
-            dc = dc + '<div class="col-xs-4"><input type="text" class="choose data form-control"  value=" ' + value + '"/></div>'
+            dc = dc + tstart +  '<input type="text" class="choose data form-control"  value=" ' + value + '">' + tend;
         });
         $("#data").html(dc);
 
@@ -105,6 +112,12 @@ $(document).ready(function () {
             $(".choose").change(function () {
                 $(this).css({ "backgroundColor": $(this).val() });
                 generate(); //regenerate final theme at each cell change
+            });
+            
+            // delete the cell when "x" is clicked
+            $(".x").click(function () {
+                $(this).prev().remove();
+                $(this).remove();
             });
 
         });
