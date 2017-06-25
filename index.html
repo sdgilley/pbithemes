@@ -25,11 +25,24 @@ title: HOME
                 </div>
                 <div class="panel-body">
                      <p>                     
-                        Type a new value in any cell to change the color. 
+                        Type a new value in any cell to change the color.  
                      </p>
-                    <div id="general"></div>
-                    <hr>
-                    <div id="data"></div>            
+                     <label >Data Colors </label>
+                     <div class="row">
+                        <div id="data"></div> 
+                     </div>
+                    <button class="btn btn-default" id="addCell">Add a Cell</a></button>
+
+                     <hr>
+                     <div class="row">
+                            <div class="form-group form-horizontal">
+                            <div id="bgdiv" class="col-sm-4"></div>
+                            <div id="fgdiv" class="col-sm-4"></div>
+                            <div id="tadiv" class="col-sm-4"></div>
+                        </div>
+                    </div>
+                   
+                               
                 </div>
             </div> 
             <h3>Your New Theme</h3>
@@ -53,7 +66,7 @@ title: HOME
                     <div class="col-sm-4">
                     <p>Select a theme to start:
                     </p>
-                    <select  id=selT class="form-control ">
+                    <select  id=selTheme class="form-control ">
                         <option selected='y' value="waveform">Waveform</option>
                         <option value="colorblind">Colorblind</option>
                          <option value="valentine">Valentine's</option>
@@ -74,7 +87,7 @@ title: HOME
             <hr>
             <div class="container">
                 <div class="row pull-right">
-                <button type="button" class="btn btn-primary" id="loadnew" data-dismiss="modal" aria-hidden="true">Load</button>
+                <button type="button" class="btn btn-primary" id="loadNew" data-dismiss="modal" aria-hidden="true">Load</button>
                 </div>
             </div>
             
