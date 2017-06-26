@@ -1,102 +1,101 @@
----
-layout: default
-title: HOME
----
+--- layout: default title: HOME ---
 <div class="container start">
-     <div class="row">
-         <div class="col-md-12"><!-- main div -->
+    <div class="row">
+        <div class="col-md-12">
+            <!-- main div -->
             <p></p>
-            Visualize your PowerBI Report Theme here.  You can also modify the colors and grab the code for your new modified theme.  See <a href="https://powerbi.microsoft.com/en-us/documentation/powerbi-desktop-report-themes/">Use Report Themes in Power BI Desktop (Preview)</a> for more information about Report Themes. 
+            Visualize your PowerBI Report Theme here. You can also modify the colors and grab the code for your new modified theme. See
+            <a href="https://powerbi.microsoft.com/en-us/documentation/powerbi-desktop-report-themes/">Use Report Themes in Power BI Desktop (Preview)</a>            for more information about Report Themes.
             <p></p>
-            
+
 
             <p></p>
             <p>Load a theme to start.</p>
 
-                <button class="btn btn-primary" data-toggle='modal' href='#inputDlg'>Load a Theme </button>
-                <p></p>
-                <p></p>
-         </div>
-         <hr>
-         <div id="result" class="hidden">
+            <button class="btn btn-primary" data-toggle='modal' href='#inputDlg'>Load a Theme </button>
+            <p></p>
+            <p></p>
+        </div>
+        <hr>
+        <div id="result" class="hidden">
             <div class="panel panel-info">
                 <div class="panel-heading">
-                <h3 class="panel-title" id="themeName"> </h3>
+                    <h3 class="panel-title" id="themeName"> </h3>
                 </div>
                 <div class="panel-body">
-                     <p>                     
-                        Type a new value in any cell to change the color.  Here are a few sites that might help you find colors to use:
-             <li><a href="http://palettegenerator.com/" target="_blank">Palette Generator</a></li>
-             <li><a href="http://tools.medialab.sciences-po.fr/iwanthue/" target="_blank">i want hue</a></li>
-                     </p>
-                     <label >Data Colors </label>
-                     <div class="row">
-                        <div id="data"></div> 
-                     </div>
+                    <p>
+                        Type a new value in any cell to change the color. Here are a few sites that might help you find colors to use:
+                        <li><a href="http://palettegenerator.com/" target="_blank">Palette Generator</a></li>
+                        <li><a href="http://tools.medialab.sciences-po.fr/iwanthue/" target="_blank">i want hue</a></li>
+                    </p>
+                    <label>Data Colors </label>
+                    <div class="row">
+                        <div id="data"></div>
+                    </div>
                     <button class="btn btn-default" id="addCell">Add a Cell</a></button>
 
-                     <hr>
-                     <div class="row">
-                            <div class="form-group form-horizontal">
+                    <hr>
+                    <div class="row">
+                        <div class="form-group form-horizontal">
                             <div id="bgdiv" class="col-sm-4"></div>
                             <div id="fgdiv" class="col-sm-4"></div>
                             <div id="tadiv" class="col-sm-4"></div>
                         </div>
                     </div>
-                   
-                               
+
+
                 </div>
-            </div> 
+            </div>
             <h3>Your New Theme</h3>
             <p>This theme updates each time you change a value above - copy it when you're happy with your theme.</p>
-            <textarea id="output" rows="3" class="form-control col-xs-12" > </textarea>
-         </div>
-        </div> <!-- /main div -->
-     </div>
-
- <!-- INPUT theme DIALOG -->
-    <div class="modal fade" id="inputDlg" tabindex="-1" role="dialog" aria-labelledby="Load a Theme" aria-hidden="true">
-    <div class="modal-dialog" style="width: 90%;">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-          <h1 class="modal-title" id="dlgTitle">Load a Theme</h1>
+            <textarea id="output" rows="3" class="form-control col-xs-12"> </textarea>
         </div>
-        <div class="modal-body" id="dlgContent">
-            <div class="container">
-                <div class="row"> 
-                    <div class="col-sm-4">
-                    <p>Select a theme to start:
-                    </p>
-                    <select  id=selTheme class="form-control ">
+    </div>
+    <!-- /main div -->
+</div>
+
+<!-- INPUT theme DIALOG -->
+<div class="modal fade" id="inputDlg" tabindex="-1" role="dialog" aria-labelledby="Load a Theme" aria-hidden="true">
+    <div class="modal-dialog" style="width: 90%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h1 class="modal-title" id="dlgTitle">Load a Theme</h1>
+            </div>
+            <div class="modal-body" id="dlgContent">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <p>Select a theme to start:
+                            </p>
+                            <select id=selTheme class="form-control ">
                         <option selected='y' value="waveform">Waveform</option>
                         <option value="colorblind">Colorblind</option>
                          <option value="valentine">Valentine's</option>
-                        </select>  
-                    </div> 
-                </div> 
-                <hr/>  
-             <div class="row">
-                 <p>Or paste your theme here:
-                 </p>       
-            <textarea id="input" rows="10" class="form-control col-xs-12" >
+                        </select>
+                        </div>
+                    </div>
+                    <hr/>
+                    <div class="row">
+                        <p>Or paste your theme here:
+                        </p>
+                        <textarea id="input" rows="10" class="form-control col-xs-12">
             </textarea>
 
 
-            </div>
-        </div>
-                    
-            <hr>
-            <div class="container">
-                <div class="row pull-right">
-                <button type="button" class="btn btn-primary" id="loadNew" data-dismiss="modal" aria-hidden="true">Load</button>
+                    </div>
                 </div>
+
+                <hr>
+                <div class="container">
+                    <div class="row pull-right">
+                        <button type="button" class="btn btn-primary" id="loadNew" data-dismiss="modal" aria-hidden="true">Load</button>
+                    </div>
+                </div>
+
+
             </div>
-            
-                
         </div>
-      </div>
     </div>
-    </div>
-    <!-- /LOAD DIALOG --> 
-    
+</div>
+<!-- /LOAD DIALOG -->
