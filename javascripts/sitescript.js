@@ -118,6 +118,8 @@ $(document).ready(function () {
             $(".x").click(function () {
                 $(this).prev().remove();
                 $(this).remove();
+                // now re-generate
+                generate();
             });
 
         });
@@ -136,7 +138,7 @@ $(document).ready(function () {
         newTmp.background = $("#bg").val();
         newTmp.foreground = $("#fg").val();
         newTmp.tableAccent = $("#ta").val();
-        $("#output").val(JSON.stringify(newTmp), null, 4);
+        $("#output").val(JSON.stringify(newTmp));
 
     };
 
