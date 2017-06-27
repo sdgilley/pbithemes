@@ -80,12 +80,12 @@ $(document).ready(function () {
         $("#themeName").html("Theme: <strong> " + theme.name + "</strong>");
         // general section shows background, foreground, table accent
         var bg = '<label  for="bg">Background </label>';
-        bg = bg + '<input type="text" id="bg" class="choose form-control"  value=" ' + theme.background + '"/>';
+        bg = bg + '<input type="text" id="bg" class="choose form-control"  value="' + theme.background + '"/>';
         var fg = '<label  for="fg">Foreground </label>';
-        fg = fg + '<input type="text"  id="fg" class="choose form-control"  value=" ' + theme.foreground + '"/>';
+        fg = fg + '<input type="text"  id="fg" class="choose form-control"  value="' + theme.foreground + '"/>';
         var ta = '<label  for="ta">Table Accent </label>';
-        ta = ta + '<input type="text" id="ta" class="choose form-control"  value=" ' + theme.tableAccent + '"/>';
-
+        ta = ta + '<input type="text" id="ta" class="choose form-control"  value="' + theme.tableAccent + '"/>';
+        
         $("#bgdiv").html(bg);
         $("#fgdiv").html(fg);
         $("#tadiv").html(ta);
@@ -94,9 +94,9 @@ $(document).ready(function () {
         var dc = "";
         var tstart = '<div class="input-group col-xs-4">'
         var tend = ' <span class="input-group-addon x" >&times;</span></div>'
-
+        
         $.each(theme.dataColors, function (index, value) {
-            dc = dc + tstart + '<input type="text" class="choose data form-control"  value=" ' + value + '">' + tend;
+            dc = dc + tstart +  '<input type="text" class="choose data form-control"  value="' + value + '">' + tend;
         });
         $("#data").html(dc);
 
@@ -113,12 +113,11 @@ $(document).ready(function () {
                 $(this).css({ "backgroundColor": $(this).val() });
                 generate(); //regenerate final theme at each cell change
             });
-
+            
             // delete the cell when "x" is clicked
             $(".x").click(function () {
                 $(this).prev().remove();
                 $(this).remove();
-                // now re-generate
                 generate();
             });
 
@@ -132,13 +131,13 @@ $(document).ready(function () {
         newTmp.name = theme.name;
         var dcs = [];
         $(".data").each(function () {
-            dcs.push($(this).val());
+            dcs.push($.trim($(this).val()));
         });
         newTmp.dataColors = dcs;
-        newTmp.background = $("#bg").val();
-        newTmp.foreground = $("#fg").val();
-        newTmp.tableAccent = $("#ta").val();
-        $("#output").val(JSON.stringify(newTmp));
+        newTmp.background = $.trim($("#bg").val());
+        newTmp.foreground = $.trim($("#fg").val());
+        newTmp.tableAccent = $.trim($("#ta").val());
+        $("#output").val(JSON.stringify(newTmp), null, '\t');
 
     };
 
