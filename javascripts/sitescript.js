@@ -6,7 +6,7 @@ $(document).ready(function () {
 
     // populate the theme selector
     $.ajax({
-        url: 'PowerViewThemes/',
+        url: '/PowerViewThemes/',
         success: function (data) {
             //list all themes
             $(data).find("a:contains(" + fileExt + ")").each(function () {
@@ -18,7 +18,7 @@ $(document).ready(function () {
 
     // click on a file
     $("#files").change(function () {
-        filename = 'tree/master/PowerViewThemes/' + $("#files").val()
+        filename = '/PowerViewThemes/' + $("#files").val()
         $.get(filename, function (data) {
             $("#input").val(JSON.stringify(data));
             showstrip(data);
