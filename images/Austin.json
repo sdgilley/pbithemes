@@ -1,0 +1,7 @@
+{ 
+    "name": "Austin", 
+    "dataColors": ["#94C600", "#71685A", "#FF6700", "#909465", "#956B43", "#FEA022", "#33C600", "#6F715A", "#FFE400", "#799465", "#959243", "#F1FE22"],
+    "background":"#FFFFFF",
+    "foreground": "#71685A",
+    "tableAccent": "#94C600"
+}

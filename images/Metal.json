@@ -1,0 +1,7 @@
+{ 
+    "name": "Metal", 
+    "dataColors": ["#7FD13B", "#EA157A", "#FEB80A", "#00ADDC", "#738AC8", "#1AB39F", "#3BD13E", "#EA1515", "#CDFE0A", "#0043DC", "#8573C8", "#1A7FB3"],
+    "background":"#FFFFFF",
+    "foreground": "#EA157A",
+    "tableAccent": "#7FD13B"
+}

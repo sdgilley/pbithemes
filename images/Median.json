@@ -1,0 +1,7 @@
+{ 
+    "name": "Median", 
+    "dataColors": ["#94B6D2", "#DD8047", "#A5AB81", "#D8B25C", "#7BA79D", "#968C8C", "#9498D2", "#DDC947", "#91AB81", "#C2D85C", "#7B9CA7", "#96918C"],
+    "background":"#FFFFFF",
+    "foreground": "#DD8047",
+    "tableAccent": "#94B6D2"
+}

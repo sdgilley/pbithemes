@@ -1,0 +1,7 @@
+{ 
+    "name": "Solstice", 
+    "dataColors": ["#3891A7", "#FEB80A", "#C32D2E", "#84AA33", "#964305", "#475A8D", "#385CA7", "#CDFE0A", "#C3732D", "#49AA33", "#968A05", "#56478D"],
+    "background":"#FFFFFF",
+    "foreground": "#3891A7",
+    "tableAccent": "#FEB80A"
+}

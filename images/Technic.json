@@ -1,0 +1,7 @@
+{ 
+    "name": "Technic", 
+    "dataColors": ["#6EA0B0", "#CCAF0A", "#8D89A4", "#748560", "#9E9273", "#7E848D", "#6E80B0", "#89CC0A", "#9A89A4", "#628560", "#959E73", "#7F7E8D"],
+    "background":"#FFFFFF",
+    "foreground": "#6EA0B0",
+    "tableAccent": "#CCAF0A"
+}

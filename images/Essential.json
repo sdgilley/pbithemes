@@ -1,0 +1,7 @@
+{ 
+    "name": "Essential", 
+    "dataColors": ["#7A7A7A", "#F5C201", "#526DB0", "#989AAC", "#DC5924", "#B4B392", "#7A7A7A", "#B3F501", "#6352B0", "#9F98AC", "#DCB224", "#A4B492"],
+    "background":"#FFFFFF",
+    "foreground": "#526DB0",
+    "tableAccent": "#7A7A7A"
+}

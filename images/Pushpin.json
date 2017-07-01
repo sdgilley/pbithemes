@@ -1,0 +1,7 @@
+{ 
+    "name": "Pushpin", 
+    "dataColors": ["#FDA023", "#AA2B1E", "#71685C", "#64A73B", "#EB5605", "#B9CA1A", "#F0FD23", "#AA6D1E", "#6F715C", "#3BA745", "#EBC205", "#64CA1A"],
+    "background":"#FFFFFF",
+    "foreground": "#AA2B1E",
+    "tableAccent": "#FDA023"
+}

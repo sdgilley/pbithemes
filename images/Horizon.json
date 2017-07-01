@@ -1,0 +1,7 @@
+{ 
+    "name": "Horizon", 
+    "dataColors": ["#7E97AD", "#CC8E60", "#7A6A60", "#B4936D", "#67787B", "#9D936F", "#7E80AD", "#CCC360", "#7A7660", "#B3B46D", "#676E7B", "#909D6F"],
+    "background":"#FFFFFF",
+    "foreground": "#CC8E60",
+    "tableAccent": "#7E97AD"
+}

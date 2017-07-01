@@ -1,0 +1,7 @@
+{ 
+    "name": "Theme5", 
+    "dataColors": ["#BEB113", "#BBA8E8", "#DD6952", "#7FD5DB", "#60AF89", "#91A9D0", "#C7F073", "#5E69D8", "#BD8E29", "#00B8F1", "#DE3A15", "#FF9A00"],
+    "background":"#FFFFFF",
+    "foreground": "#60AF89",
+    "tableAccent": "#7FD5DB"
+}

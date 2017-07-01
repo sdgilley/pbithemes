@@ -1,0 +1,7 @@
+{ 
+    "name": "Thatch", 
+    "dataColors": ["#759AA5", "#CFC60D", "#99987F", "#90AC97", "#FFAD1C", "#B9AB6F", "#7582A5", "#7ACF0D", "#8D997F", "#90ACA4", "#E1FF1C", "#A3B96F"],
+    "background":"#FFFFFF",
+    "foreground": "#759AA5",
+    "tableAccent": "#CFC60D"
+}

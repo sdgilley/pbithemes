@@ -1,0 +1,7 @@
+{ 
+    "name": "BlackTie", 
+    "dataColors": ["#6F6F74", "#A7B789", "#BEAE98", "#92A9B9", "#9C8265", "#8D6974", "#716F74", "#90B789", "#BBBE98", "#9297B9", "#9B9C65", "#8D6F69"],
+    "background":"#FFFFFF",
+    "foreground": "#8D6974",
+    "tableAccent": "#6F6F74"
+}

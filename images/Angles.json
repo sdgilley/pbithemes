@@ -1,0 +1,7 @@
+{ 
+    "name": "Angles", 
+    "dataColors": ["#797B7E", "#F96A1B", "#08A1D9", "#7C984A", "#C2AD8D", "#506E94", "#79797E", "#F9D71B", "#083ED9", "#57984A", "#BDC28D", "#535094"],
+    "background":"#FFFFFF",
+    "foreground": "#506E94",
+    "tableAccent": "#797B7E"
+}

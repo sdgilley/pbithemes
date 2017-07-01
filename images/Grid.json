@@ -1,0 +1,7 @@
+{ 
+    "name": "Grid", 
+    "dataColors": ["#C66951", "#BF974D", "#928B70", "#87706B", "#94734E", "#6F777D", "#C6A151", "#B0BF4D", "#889270", "#877D6B", "#93944E", "#6F707D"],
+    "background":"#FFFFFF",
+    "foreground": "#87706B",
+    "tableAccent": "#C66951"
+}

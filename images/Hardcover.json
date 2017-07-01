@@ -1,0 +1,7 @@
+{ 
+    "name": "Hardcover", 
+    "dataColors": ["#873624", "#D6862D", "#D0BE40", "#877F6C", "#972109", "#AEB795", "#876524", "#D4D62D", "#9BD040", "#82876C", "#976609", "#9EB795"],
+    "background":"#FFFFFF",
+    "foreground": "#D6862D",
+    "tableAccent": "#873624"
+}

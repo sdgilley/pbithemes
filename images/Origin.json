@@ -1,0 +1,7 @@
+{ 
+    "name": "Origin", 
+    "dataColors": ["#727CA3", "#9FB8CD", "#D2DA7A", "#FADA7A", "#B88472", "#8E736A", "#8072A3", "#9FA2CD", "#A2DA7A", "#DDFA7A", "#B8A572", "#8E846A"],
+    "background":"#FFFFFF",
+    "foreground": "#727CA3",
+    "tableAccent": "#9FB8CD"
+}

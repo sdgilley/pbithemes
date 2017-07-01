@@ -1,0 +1,7 @@
+{ 
+    "name": "Apothecary", 
+    "dataColors": ["#93A299", "#CF543F", "#B5AE53", "#848058", "#E8B54D", "#786C71", "#93A2A0", "#CF9A3F", "#8CB553", "#728458", "#D0E84D", "#786D6C"],
+    "background":"#FFFFFF",
+    "foreground": "#CF543F",
+    "tableAccent": "#93A299"
+}

@@ -1,0 +1,7 @@
+{ 
+    "name": "Slipstream", 
+    "dataColors": ["#4E67C8", "#5ECCF3", "#A7EA52", "#5DCEAF", "#FF8021", "#F14124", "#704EC8", "#5E84F3", "#5DEA52", "#5DB7CE", "#FFEC20", "#F1A624"],
+    "background":"#FFFFFF",
+    "foreground": "#4E67C8",
+    "tableAccent": "#5ECCF3"
+}

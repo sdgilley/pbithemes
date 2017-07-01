@@ -1,0 +1,7 @@
+{ 
+    "name": "Theme8", 
+    "dataColors": ["#8D35DE", "#BD8E29", "#00B8F1", "#DE3A15", "#FF9A00", "#3ACB35", "#BBA8E8", "#DD6952", "#7FD5DB", "#60AF89", "#91A9D0", "#C7F073"],
+    "background":"#FFFFFF",
+    "foreground": "#8D35DE",
+    "tableAccent": "#BD8E29"
+}

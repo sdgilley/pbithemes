@@ -1,0 +1,7 @@
+{ 
+    "name": "Elemental", 
+    "dataColors": ["#629DD1", "#297FD5", "#7F8FA9", "#4A66AC", "#5AA2AE", "#9D90A0", "#6267D1", "#292DD5", "#837FA9", "#5C4AAC", "#5A79AE", "#A0909B"],
+    "background":"#FFFFFF",
+    "foreground": "#297FD5",
+    "tableAccent": "#629DD1"
+}

@@ -1,0 +1,7 @@
+{ 
+    "name": "Equity", 
+    "dataColors": ["#D34817", "#9B2D1F", "#A28E6A", "#956251", "#918485", "#855D5D", "#D3A417", "#9B681F", "#9AA26A", "#958251", "#918984", "#85705D"],
+    "background":"#FFFFFF",
+    "foreground": "#9B2D1F",
+    "tableAccent": "#D34817"
+}

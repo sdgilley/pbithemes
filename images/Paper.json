@@ -1,0 +1,7 @@
+{ 
+    "name": "Paper", 
+    "dataColors": ["#A5B592", "#F3A447", "#E7BC29", "#D092A7", "#9C85C0", "#809EC2", "#94B592", "#F0F347", "#B8E729", "#D09A92", "#B885C0", "#8280C2"],
+    "background":"#FFFFFF",
+    "foreground": "#A5B592",
+    "tableAccent": "#E7BC29"
+}
