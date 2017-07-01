@@ -18,7 +18,7 @@ $(document).ready(function () {
 
     // click on a file
     $("#files").change(function () {
-        filename = '/PowerViewThemes/' + $("#files").val()
+        filename = 'tree/master/PowerViewThemes/' + $("#files").val()
         $.get(filename, function (data) {
             $("#input").val(JSON.stringify(data));
             showstrip(data);
