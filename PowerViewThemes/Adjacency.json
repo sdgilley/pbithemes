@@ -1,0 +1,7 @@
+{ 
+    "name": "Adjacency", 
+    "dataColors": ["#A9A57C", "#9CBEBD", "#D2CB6C", "#95A39D", "#C89F5D", "#B1A089", "#97A97C", "#9CAEBE", "#A8D26C", "#95A2A3", "#BCC85D", "#AEB189"],
+    "background":"#FFFFFF",
+    "foreground": "#95A39D",
+    "tableAccent": "#A9A57C"
+}

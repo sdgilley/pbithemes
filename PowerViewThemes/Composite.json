@@ -1,0 +1,7 @@
+{ 
+    "name": "Composite", 
+    "dataColors": ["#98C723", "#59B0B9", "#DEAE00", "#B77BB4", "#E0773C", "#A98D63", "#49C723", "#5981B9", "#A1DE00", "#B77B97", "#E0C73C", "#A3A963"],
+    "background":"#FFFFFF",
+    "foreground": "#59B0B9",
+    "tableAccent": "#98C723"
+}

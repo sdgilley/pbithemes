@@ -1,0 +1,7 @@
+{ 
+    "name": "Flow", 
+    "dataColors": ["#0F6FC6", "#009DD9", "#0BD0D9", "#10CF9B", "#7CCA62", "#A5C249", "#0F18C6", "#0033D9", "#0B6BD9", "#10A8CF", "#62CA7A", "#6BC249"],
+    "background":"#FFFFFF",
+    "foreground": "#0F18C6",
+    "tableAccent": "#0F6FC6"
+}

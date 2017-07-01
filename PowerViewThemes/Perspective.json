@@ -1,0 +1,7 @@
+{ 
+    "name": "Perspective", 
+    "dataColors": ["#838D9B", "#D2610C", "#80716A", "#94147C", "#5D5AD2", "#6F6C7D", "#84839B", "#D2C10C", "#807B6A", "#94143E", "#985AD2", "#776C7D"],
+    "background":"#FFFFFF",
+    "foreground": "#D2610C",
+    "tableAccent": "#838D9B"
+}

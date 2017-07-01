@@ -1,0 +1,7 @@
+{ 
+    "name": "Civic", 
+    "dataColors": ["#D16349", "#CCB400", "#8CADAE", "#8C7B70", "#8FB08C", "#D19049", "#D1A649", "#81CC00", "#8C9DAE", "#8C8870", "#8CB09A", "#CFD149"],
+    "background":"#FFFFFF",
+    "foreground": "#8CADAE",
+    "tableAccent": "#D16349"
+}

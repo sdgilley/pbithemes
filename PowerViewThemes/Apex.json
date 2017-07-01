@@ -1,0 +1,7 @@
+{ 
+    "name": "Apex", 
+    "dataColors": ["#CEB966", "#9CB084", "#6BB1C9", "#6585CF", "#7E6BC9", "#A379BB", "#B2CE66", "#87B084", "#6B83C9", "#7965CF", "#AB6BC9", "#BB79B2"],
+    "background":"#FFFFFF",
+    "foreground": "#9CB084",
+    "tableAccent": "#CEB966"
+}

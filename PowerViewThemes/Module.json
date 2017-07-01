@@ -1,0 +1,7 @@
+{ 
+    "name": "Module", 
+    "dataColors": ["#F0AD00", "#60B5CC", "#E66C7D", "#6BB76D", "#E88651", "#C64847", "#C0F000", "#6081CC", "#E6976C", "#6BB792", "#E8CD51", "#C68547"],
+    "background":"#FFFFFF",
+    "foreground": "#60B5CC",
+    "tableAccent": "#F0AD00"
+}

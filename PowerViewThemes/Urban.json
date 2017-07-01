@@ -1,0 +1,7 @@
+{ 
+    "name": "Urban", 
+    "dataColors": ["#53548A", "#438086", "#A04DA3", "#C4652D", "#8B5D3D", "#5C92B5", "#6D538A", "#435F86", "#A34D7B", "#C4AC2D", "#8B823D", "#5C66B5"],
+    "background":"#FFFFFF",
+    "foreground": "#438086",
+    "tableAccent": "#53548A"
+}

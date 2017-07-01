@@ -1,0 +1,7 @@
+{ 
+    "name": "Concourse", 
+    "dataColors": ["#2DA2BF", "#DA1F28", "#EB641B", "#39639D", "#474B78", "#7D3C4A", "#2D5DBF", "#DA6E1F", "#EBC61B", "#40399D", "#5A4778", "#7D4D3C"],
+    "background":"#FFFFFF",
+    "foreground": "#DA1F28",
+    "tableAccent": "#2DA2BF"
+}

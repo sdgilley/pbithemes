@@ -70,36 +70,32 @@ title: HOME
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-4">
-                            <p>Select a theme to start:
-                            </p>
-                            <select id=selTheme class="form-control ">
-                        <option selected='y' value="waveform">Waveform</option>
-                        <option value="colorblind">Colorblind</option>
-                         <option value="valentine">Valentine's</option>
-                        </select>
+                            <div class="form-group">
+                                <label for="files">Select a theme to start</label>
+                                <select multiple size=10 class="form-control" id="files">
+                                </select>
+                                <span id="colors"></span>
+                            </div>
+                        </div>
+                        <div class="col-sm-8">
+
+                                <label for="input">Or paste your theme content here:</label>
+
+                            <textarea id="input" rows="5" class="form-control col-xs-12">
+            </textarea>
                         </div>
                     </div>
-                    <hr/>
-                    <div class="row">
-                        <p>Or paste your theme here:
-                        </p>
-                        <textarea id="input" rows="10" class="form-control col-xs-12">
-            </textarea>
 
-
+                    <hr>
+                    <div class="container">
+                        <div class="row pull-right">
+                            <button type="button" class="btn btn-primary" id="loadNew" data-dismiss="modal" aria-hidden="true">Load</button>
+                        </div>
                     </div>
+
+
                 </div>
-
-                <hr>
-                <div class="container">
-                    <div class="row pull-right">
-                        <button type="button" class="btn btn-primary" id="loadNew" data-dismiss="modal" aria-hidden="true">Load</button>
-                    </div>
-                </div>
-
-
             </div>
         </div>
     </div>
-</div>
-<!-- /LOAD DIALOG -->
+    <!-- /LOAD DIALOG -->

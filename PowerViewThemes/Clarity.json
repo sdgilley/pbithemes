@@ -1,0 +1,7 @@
+{ 
+    "name": "Clarity", 
+    "dataColors": ["#93A299", "#AD8F67", "#726056", "#4C5A6A", "#808DA0", "#79463D", "#93A2A0", "#A8AD67", "#726D56", "#4C4C6A", "#8280A0", "#79633D"],
+    "background":"#FFFFFF",
+    "foreground": "#AD8F67",
+    "tableAccent": "#93A299"
+}

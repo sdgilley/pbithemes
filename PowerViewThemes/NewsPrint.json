@@ -1,0 +1,7 @@
+{ 
+    "name": "NewsPrint", 
+    "dataColors": ["#AD0101", "#726056", "#AC956E", "#808DA9", "#424E5B", "#730E00", "#AD5601", "#726D56", "#A5AC6E", "#8780A9", "#42425B", "#734600"],
+    "background":"#FFFFFF",
+    "foreground": "#AD0101",
+    "tableAccent": "#726056"
+}

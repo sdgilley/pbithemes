@@ -1,0 +1,7 @@
+{ 
+    "name": "Couture", 
+    "dataColors": ["#9E8E5C", "#A09781", "#85776D", "#AEAFA9", "#8D878B", "#6B6149", "#8D9E5C", "#99A081", "#85826D", "#ABAFA9", "#8D8788", "#656B49"],
+    "background":"#FFFFFF",
+    "foreground": "#85776D",
+    "tableAccent": "#9E8E5C"
+}

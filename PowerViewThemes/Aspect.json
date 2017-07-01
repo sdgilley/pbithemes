@@ -1,0 +1,7 @@
+{ 
+    "name": "Aspect", 
+    "dataColors": ["#F07F09", "#9F2936", "#1B587C", "#4E8542", "#604878", "#C19859", "#F0ED09", "#9F5529", "#1B287C", "#428556", "#774878", "#B8C159"],
+    "background":"#FFFFFF",
+    "foreground": "#9F2936",
+    "tableAccent": "#F07F09"
+}

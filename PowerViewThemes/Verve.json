@@ -1,0 +1,7 @@
+{ 
+    "name": "Verve", 
+    "dataColors": ["#FF388C", "#E40059", "#9C007F", "#68007F", "#005BD3", "#00349E", "#FF4638", "#E41500", "#9C0033", "#7F0059", "#0900D3", "#1A009E"],
+    "background":"#FFFFFF",
+    "foreground": "#E40059",
+    "tableAccent": "#FF388C"
+}

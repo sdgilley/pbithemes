@@ -1,0 +1,7 @@
+{ 
+    "name": "Trek", 
+    "dataColors": ["#F0A22E", "#A5644E", "#B58B80", "#C3986D", "#A19574", "#C17529", "#E0F02E", "#A58D4E", "#B5A480", "#C3C16D", "#96A174", "#C1BF29"],
+    "background":"#FFFFFF",
+    "foreground": "#A5644E",
+    "tableAccent": "#F0A22E"
+}

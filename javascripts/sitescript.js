@@ -2,59 +2,40 @@
 
 $(document).ready(function () {
     //initialize
+    var fileExt = ".json";
 
-    var theme;
-    // load initial theme
-    var inp = '{ \
-        "name": "Waveform", \
-        "dataColors": ["#31B6FD", "#4584D3", "#5BD078", "#A5D028", "#F5C040", "#05E0DB", "#3153FD", "#4C45D3", "#5BD0B0", "#54D028", "#D0F540", "#057BE0"], \
-        "background":"#FFFFFF", \
-        "foreground": "#4584D3", \
-        "tableAccent": "#31B6FD" \
-        }';
-    $("#input").val(inp);
-
-    // selTheme dropdown on Load dialog pre-loads a theme
-    $("#selTheme").change(function () {
-        var t = $(this).val();
-        switch (t) {
-            case "waveform":
-                inp = '{ \
-        "name": "Waveform", \
-        "dataColors": ["#31B6FD", "#4584D3", "#5BD078", "#A5D028", "#F5C040", "#05E0DB", "#3153FD", "#4C45D3", "#5BD0B0", "#54D028", "#D0F540", "#057BE0"], \
-        "background":"#FFFFFF", \
-        "foreground": "#4584D3", \
-        "tableAccent": "#31B6FD" \
-        }';
-                break;
-            case "colorblind":
-                inp = '{ \
-        "name": "ColorblindSafe-Longer", \
-        "dataColors": ["#074650", "#009292", "#fe6db6", "#feb5da", "#480091", "#b66dff", "#b5dafe", "#6db6ff", "#914800", "#23fd23"], \
-        "background":"#FFFFFF", \
-        "foreground": "#074650", \
-        "tableAccent": "#fe6db6" \
-    }';
-                break;
-            case "valentine":
-                inp = '{ \
-        "name": "Valentine\'s Day", \
-        "dataColors": ["#990011", "#cc1144", "#ee7799", "#eebbcc", "#cc4477", "#cc5555", "#882222", "#A30E33"],\
-        "background":"#FFFFFF",\
-        "foreground": "#ee7799",\
-        "tableAccent": "#990011"\
-    }';
-                break;
-            default:
-            //
+    // populate the theme selector
+    $.ajax({
+        url: 'PowerViewThemes/',
+        success: function (data) {
+            //list all themes
+            $(data).find("a:contains(" + fileExt + ")").each(function () {
+                $("#files").append('<option>' + $(this).text());
+            });
+            $("#fileNames").append('</option>');
         }
-        $("#input").val(inp);
-
     });
+
+    // click on a file
+    $("#files").change(function () {
+        filename = 'PowerViewThemes/' + $("#files").val()
+        $.get(filename, function (data) {
+            $("#input").val(JSON.stringify(data));
+            showstrip(data);
+        }, 'json');
+    });
+
+    function showstrip(data) {
+        //show the data colors
+         $('#colors').html($("#files").val() + ' ')
+        $.each(data.dataColors, function (index, value) {
+            $('#colors').append('<span style="background-color:' + value + '"> &nbsp;&nbsp;</span>');
+        });
+    }
 
     // after closing the dialog, read the input to populate the main page, and show the result
     $("#loadNew").click(function () {
-        theme = $.parseJSON($("#input").val());
+        theme = JSON.parse($("#input").val());
         loadTheme(theme);  // creates the text input cells and colors them
         applyColors(); //make cells show their colors
         generate(); //generate the json text area
@@ -85,7 +66,7 @@ $(document).ready(function () {
         fg = fg + '<input type="text"  id="fg" class="choose form-control"  value="' + theme.foreground + '"/>';
         var ta = '<label  for="ta">Table Accent </label>';
         ta = ta + '<input type="text" id="ta" class="choose form-control"  value="' + theme.tableAccent + '"/>';
-        
+
         $("#bgdiv").html(bg);
         $("#fgdiv").html(fg);
         $("#tadiv").html(ta);
@@ -94,9 +75,9 @@ $(document).ready(function () {
         var dc = "";
         var tstart = '<div class="input-group col-xs-4">'
         var tend = ' <span class="input-group-addon x" >&times;</span></div>'
-        
+
         $.each(theme.dataColors, function (index, value) {
-            dc = dc + tstart +  '<input type="text" class="choose data form-control"  value="' + value + '">' + tend;
+            dc = dc + tstart + '<input type="text" class="choose data form-control"  value="' + value + '">' + tend;
         });
         $("#data").html(dc);
 
@@ -113,7 +94,7 @@ $(document).ready(function () {
                 $(this).css({ "backgroundColor": $(this).val() });
                 generate(); //regenerate final theme at each cell change
             });
-            
+
             // delete the cell when "x" is clicked
             $(".x").click(function () {
                 $(this).prev().remove();

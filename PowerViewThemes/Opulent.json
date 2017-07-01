@@ -1,0 +1,7 @@
+{ 
+    "name": "Opulent", 
+    "dataColors": ["#B83D68", "#AC66BB", "#DE6C36", "#F9B639", "#CF6DA4", "#FA8D3D", "#B84E3D", "#BB66A0", "#DEBC36", "#E0F939", "#CF6D74", "#FAE63D"],
+    "background":"#FFFFFF",
+    "foreground": "#B83D68",
+    "tableAccent": "#AC66BB"
+}

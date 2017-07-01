@@ -1,0 +1,7 @@
+{ 
+    "name": "Oriel", 
+    "dataColors": ["#FE8637", "#7598D9", "#B32C16", "#F5CD2D", "#AEBAD5", "#777C84", "#FEE437", "#8375D9", "#B37616", "#BAF52D", "#B4AED5", "#787784"],
+    "background":"#FFFFFF",
+    "foreground": "#7598D9",
+    "tableAccent": "#FE8637"
+}

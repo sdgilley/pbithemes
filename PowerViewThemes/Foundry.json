@@ -1,0 +1,7 @@
+{ 
+    "name": "Foundry", 
+    "dataColors": ["#72A376", "#B0CCB0", "#A8CDD7", "#C0BEAF", "#CEC597", "#E8B7B7", "#72A38D", "#B0CCBD", "#A8B6D7", "#B9C0AF", "#BCCE97", "#E8CFB7"],
+    "background":"#FFFFFF",
+    "foreground": "#72A38D",
+    "tableAccent": "#72A376"
+}
