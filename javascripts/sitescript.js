@@ -6,7 +6,7 @@ $(document).ready(function () {
 
     // populate the theme selector
     $.ajax({
-        url: 'images/',
+        url: '{{ site.github.url }}/images/',
         success: function (data) {
             //list all themes
             $(data).find("a:contains(" + fileExt + ")").each(function () {
@@ -18,7 +18,7 @@ $(document).ready(function () {
 
     // click on a file
     $("#files").change(function () {
-        filename = 'images/' + $("#files").val()
+        filename = '{{ site.github.url }}/images/' + $("#files").val()
         $.get(filename, function (data) {
             $("#input").val(JSON.stringify(data));
             showstrip(data);
