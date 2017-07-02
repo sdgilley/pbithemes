@@ -83,6 +83,7 @@ function applyColors() {
     //apply the background color to each cell
     $(".choose").each(function () {
         $(this).css({ "backgroundColor": $(this).val() });
+        if lowerc
 
         //update cells each time user types new value
         $(".choose").change(function () {
