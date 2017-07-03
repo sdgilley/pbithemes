@@ -7,28 +7,23 @@ title: HOME
     <div class="row">
         <div class="col-md-12">
             <!-- main div -->
-            <p></p>
             Visualize your PowerBI Report Theme here. You can also modify the colors and grab the code for your new modified theme. See
-            <a href="https://powerbi.microsoft.com/en-us/documentation/powerbi-desktop-report-themes/">Use Report Themes in Power BI Desktop (Preview)</a>            for more information about Report Themes.
-            <p></p>
-
-
-            <p></p>
-            <p>Load a theme to start.</p>
-
+            <a href="https://powerbi.microsoft.com/en-us/documentation/powerbi-desktop-report-themes/">Use Report Themes in Power BI Desktop (Preview)</a> 
+            for more information about Report Themes.  To begin, load a theme.
+            <p>
             <button class="btn btn-primary" data-toggle='modal' href='#inputDlg'>Load a Theme </button>
-            <p></p>
-            <p></p>
+            </p>
         </div>
         <hr>
         <div id="result" class="hidden">
+            <div class="col-md-8">
             <div class="panel panel-info">
                 <div class="panel-heading">
-                    <h3 class="panel-title" id="themeName"> </h3>
+                    <h3 class="panel-title" > Theme Name: <input id="themeName"> </input></h3>
                 </div>
                 <div class="panel-body">
                     <p>
-                        Type a new value in any cell to change the color. Here are a few sites that might help you find colors to use:
+                        Type or select a new color in any cell. Here are a few sites that might help you find some colors to use:
                         <li><a href="http://palettegenerator.com/" target="_blank">Palette Generator</a></li>
                         <li><a href="http://tools.medialab.sciences-po.fr/iwanthue/" target="_blank">i want hue</a></li>
                     </p>
@@ -50,9 +45,13 @@ title: HOME
 
                 </div>
             </div>
+            </div>
+            <div class="col-md-3">
             <h3>Your New Theme</h3>
-            <p>This theme updates each time you change a value above - copy it when you're happy with your theme.</p>
-            <textarea id="output" rows="3" class="form-control col-xs-12"> </textarea>
+            <p>This theme updates each time you change a value in the Theme Editor.</p>
+            <textarea id="output" rows="10" class="form-control col-xs-12"> </textarea>
+            <button id="download" class="btn btn-primary">Download</button>
+            </div>
         </div>
     </div>
     <!-- /main div -->
@@ -60,7 +59,7 @@ title: HOME
 
 <!-- INPUT theme DIALOG -->
 <div class="modal fade" id="inputDlg" tabindex="-1" role="dialog" aria-labelledby="Load a Theme" aria-hidden="true">
-    <div class="modal-dialog" style="width: 90%;">
+    <div class="modal-dialog" style="width: 80%;">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
@@ -78,24 +77,22 @@ title: HOME
                             </div>
                         </div>
                         <div class="col-sm-8">
-
-                                <label for="input">Or paste your theme content here:</label>
-
+                            <label for="input">Or paste your theme content here:</label>
                             <textarea id="input" rows="5" class="form-control col-xs-12">
-            </textarea>
+                            </textarea>
                         </div>
                     </div>
 
                     <hr>
-                    <div class="container">
-                        <div class="row pull-right">
-                            <button type="button" class="btn btn-primary" id="loadNew" data-dismiss="modal" aria-hidden="true">Load</button>
-                        </div>
+                    <div class="row pull-right">
+                    <button type="button" class="btn btn-primary" id="loadNew" data-dismiss="modal" aria-hidden="true">
+                        Load
+                    </button>
+                        
                     </div>
-
-
                 </div>
             </div>
         </div>
     </div>
+</div>
     <!-- /LOAD DIALOG -->

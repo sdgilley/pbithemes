@@ -2,31 +2,25 @@
 ---
 
 // JavaScript Document
-
 $(document).ready(function () {
     //initialize
     $('.choose').colorpicker();
     var themes = {{ site.data | jsonify }};
 
+// load choices in selection box 
 for (var prop in themes) {
     var item = $(themes[prop])[0];
     $("#files").append("<option>" + item.name + '</option>');
-}
+};
 
-// click on a file
+// Load Dialog Actions
+
+// click on a file  in Load dialog
 $("#files").change(function () {
     var item = $(themes[$("#files").val()])[0];
     $("#input").val(JSON.stringify(item));
     showstrip(item);
 });
-
-function showstrip(item) {
-    //show the data colors
-    $('#colors').html(item.name + ' ')
-    $.each(item.dataColors, function (index, value) {
-        $('#colors').append('<span style="background-color:' + value + '"> &nbsp;&nbsp;</span>');
-    });
-}
 
 // after closing the dialog, read the input to populate the main page, and show the result
 $("#loadNew").click(function () {
@@ -37,38 +31,57 @@ $("#loadNew").click(function () {
     $("#result").removeClass('hidden'); //show the div on the main page
 });
 
+// Main Page Actions
+//
+$("#themeName").change(function () {
+    generate()
+});
+
+$("#download").click(function () {
+    fn  = $("#themeName").val() +".json"
+    download(fn, $("#output").val);
+});
+
 // addCell button adds another data cell
 $("#addCell").click(function () {
-    var tstart = '<div class="input-group col-xs-4">'
+    var tstart = '<div class="input-group col-xs-4 col-sm-3">'
     var tend = ' <span class="input-group-addon x" >&times;</span></div>'
-    var newcell = tstart + '<input  class="jscolor choose data form-control"  value="#FFFFFF" />' + tend;
+    var newcell = tstart + '<input  class="choose data form-control"  value="#FFFFFF" />' + tend;
     $("#data").append(newcell); //add the new cell
     applyColors(); //make cells show their colors
     generate(); //generate the json text area 
 });
 
+// Helper Functions
+//
+function showstrip(item) {
+    //show the data colors as a strip when clicking on the name in load dialog
+    $('#colors').html(item.name + '&nbsp;')
+    $.each(item.dataColors, function (index, value) {
+        $('#colors').append('<span style="background-color:' + value + '"> &nbsp;&nbsp;</span>');
+    });
+    $('#colors').append('<span style="background-color:' + item.background + '"> &nbsp;&nbsp;</span>');
+    $('#colors').append('<span style="background-color:' + item.foreground + '"> &nbsp;&nbsp;</span>');
+    $('#colors').append('<span style="background-color:' + item.tableAccent + '"> &nbsp;&nbsp;</span>');
 
+};
 function loadTheme(theme) {
     // creates the text input cells and uses its value for background color
-    // TODO: change text color when value is too dark
-    // TODO: add color picker for easier input
-    // TODO: currently no error checking.  bad values won't change the current cell color. 
-    $("#themeName").html("Theme: <strong> " + theme.name + "</strong>");
+    $("#themeName").val(theme.name);
     // general section shows background, foreground, table accent
     var bg = '<label  for="bg">Background </label>';
-    bg = bg + '<input  id="bg" class="jscolor choose form-control"  value="' + theme.background + '"/>';
+    bg = bg + '<input  id="bg" class="choose form-control"  value="' + theme.background + '"/>';
     var fg = '<label  for="fg">Foreground </label>';
-    fg = fg + '<input  id="fg" class="jscolor choose form-control"  value="' + theme.foreground + '"/>';
+    fg = fg + '<input  id="fg" class="choose form-control"  value="' + theme.foreground + '"/>';
     var ta = '<label  for="ta">Table Accent </label>';
-    ta = ta + '<input  id="ta" class="jscolor choose form-control"  value="' + theme.tableAccent + '"/>';
-
+    ta = ta + '<input  id="ta" class="choose form-control"  value="' + theme.tableAccent + '"/>';
     $("#bgdiv").html(bg);
     $("#fgdiv").html(fg);
     $("#tadiv").html(ta);
 
     //data colors section - build a cell for each value
     var dc = "";
-    var tstart = '<div class="input-group col-xs-4">'
+    var tstart = '<div class="input-group col-xs-4 col-sm-3">'
     var tend = ' <span class="input-group-addon x" >&times;</span></div>'
 
     $.each(theme.dataColors, function (index, value) {
@@ -77,21 +90,17 @@ function loadTheme(theme) {
     $("#data").html(dc);
 };
 
+// functions called from above
 function applyColors() {
-    //apply the background color to each cell
-        $(".choose").colorpicker();
-        $(".choose").each(function () {
-        bgcolor = $(this).val();
-         $(this).css({ "backgroundColor": bgcolor });
+    // apply the colors of cells. These functions need to be here because cells are 
+    // created after the page loads
+    $(".choose").colorpicker();
 
-        //update cells each time user types new value
-        $(".choose").change(function () {
-            bgcolor = $(this).val();
-            // textcolor = findcolor(bgcolor);
-            $(this).css({ "backgroundColor": bgcolor });
-            // $(this).css({ "color": textcolor });
-            generate(); //regenerate final theme at each cell change
-        });
+    $(".choose").each(function () {
+        bgcolor = $(this).val();
+        textcolor = txtcolor(bgcolor);
+        $(this).css({ "backgroundColor": bgcolor });
+        $(this).css({ "color": textcolor });
 
         // delete the cell when "x" is clicked
         $(".x").click(function () {
@@ -99,25 +108,33 @@ function applyColors() {
             $(this).remove();
             generate();
         });
-
     });
-}
-function findcolor(bcolor) {
-    var cl = bcolor.toLowerCase();
+    //update cells each time user types new value
+    $(".choose").change(function () {
+        bgcolor = $(this).val();
+        textcolor = txtcolor(bgcolor);
+        $(this).css({ "backgroundColor": bgcolor });
+        $(this).css({ "color": textcolor });
+        generate(); //regenerate final theme at each cell change
+    });
+};
+
+
+function txtcolor(bgcolor) {
     // simple text color assignment, not the greatest but ok for now
+    var cl = bgcolor.toLowerCase();
     if (cl == "#ffffff" | cl == "#fff" | cl == "white") {
         textcolor = "#000000"
     } else {
         textcolor = "#ffffff"
     };
-        $(this).css({ "backgroundColor": bgcolor });
-        $(this).css({ "color": textcolor });
-}
+    return textcolor;
+};
 
 function generate() {
     // generate new theme based on current values
     var newTmp = new Object();
-    newTmp.name = theme.name;
+    newTmp.name = $("#themeName").val();
     var dcs = [];
     $(".data").each(function () {
         dcs.push($.trim($(this).val()));
@@ -129,5 +146,22 @@ function generate() {
     $("#output").val(JSON.stringify(newTmp), null, '\t');
 
 };
+
+function download(filename, text) {
+    var pom = document.createElement('a');
+    pom.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+    pom.setAttribute('download', filename);
+
+    if (document.createEvent) {
+        var event = document.createEvent('MouseEvents');
+        event.initEvent('click', true, true);
+        pom.dispatchEvent(event);
+    }
+    else {
+        pom.click();
+    }
+};
+
+
 
 });
