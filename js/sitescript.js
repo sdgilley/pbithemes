@@ -5,7 +5,17 @@
 $(document).ready(function () {
     //initialize
     $('.choose').colorpicker();
+    var newthm = {"name":"newTheme",
+        "dataColors":["#333333", "#ababab"],
+        "background":"#FFFFFF",
+        "foreground":"#000000",
+        "tableAccent":"#FFFFFF"};
+    loadTheme(newthm);  // creates the text input cells and colors them
+    applyColors(); //make cells show their colors
+    generate(); //generate the json text area
+    // //list of themes to choose
     var themes = {{ site.data | jsonify }};
+     
 
 // load choices in selection box 
 for (var prop in themes) {
@@ -15,7 +25,7 @@ for (var prop in themes) {
 
 // Load Dialog Actions
 
-// click on a file  in Load dialog
+// click on a file in Load dialog
 $("#files").change(function () {
     var item = $(themes[$("#files").val()])[0];
     $("#input").val(JSON.stringify(item));
@@ -144,6 +154,24 @@ function generate() {
     newTmp.foreground = $.trim($("#fg").val());
     newTmp.tableAccent = $.trim($("#ta").val());
     $("#output").val(JSON.stringify(newTmp), null, '\t');
+    // preview plot
+    var data = [[["a",23],["b",8],["c",5],["d",25],["e",20],["f",17],["g",70],["h",25]]];
+    var containerHeight = $("#chart").parent("div.container").height();
+    var options = {
+        seriesDefaults:{
+            shadow: false, 
+            renderer:$.jqplot.PieRenderer, 
+            rendererOptions:{
+                // rotate the starting position of the pie around to 12 o'clock.
+                startAngle: -90
+            }},
+        seriesColors: newTmp.dataColors,
+        textColor: newTmp.foreground,
+        grid: {shadow:false, backgroundColor: newTmp.background},
+        legend:{ show:false },
+        height: containerHeight,
+        }; 
+    var plot = $.jqplot('chart', data, options)
 
 };
 
@@ -161,7 +189,7 @@ function download(filename, text) {
         pom.click();
     }
 };
-
+     
 
 
 });
