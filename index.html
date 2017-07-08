@@ -5,15 +5,6 @@ title: HOME
 
 <div class="container start">
     <div class="row">
-        <div class="col-md-12">
-            <!-- main div -->
-            Visualize your PowerBI Report Theme here. You can also modify the colors and grab the code for your new modified theme. See
-            <a href="https://powerbi.microsoft.com/en-us/documentation/powerbi-desktop-report-themes/">Use Report Themes in Power BI Desktop (Preview)</a>            for more information about Report Themes. To begin, load a theme.
-            <p>
-                <button class="btn btn-primary" data-toggle='modal' href='#inputDlg'>Load a Theme </button>
-            </p>
-        </div>
-        <hr>
         <div class="col-md-8">
             <div class="panel panel-info">
                 <div class="panel-heading">
@@ -21,11 +12,7 @@ title: HOME
                     </h3>
                 </div>
                 <div class="panel-body">
-                    <p>
-                        Type or select a new color in any cell. Here are a few sites that might help you find some colors to use:
-                        <li><a href="http://palettegenerator.com/" target="_blank">Palette Generator</a></li>
-                        <li><a href="http://tools.medialab.sciences-po.fr/iwanthue/" target="_blank">i want hue</a></li>
-                    </p>
+                    
                     <label>Data Colors </label>
                     <div class="row">
                         <div id="data"></div>
@@ -44,14 +31,29 @@ title: HOME
 
                 </div>
             </div>
+            <p>
+    <button id="new" class="btn btn-primary" >New Theme </button>
+    &nbsp; <button class="btn btn-primary" data-toggle='modal' href='#inputDlg'>Load a Theme </button>
+            </p><p>
+
+    See
+    <a href="https://powerbi.microsoft.com/en-us/documentation/powerbi-desktop-report-themes/">
+    Use Report Themes in Power BI Desktop (Preview)</a>            
+    for more information about Report Themes. Type or select a new color in any cell. 
+    Here are a few sites that might help you find some colors to use:
+    <li><a href="http://palettegenerator.com/" target="_blank">Palette Generator</a></li>
+    <li><a href="http://tools.medialab.sciences-po.fr/iwanthue/" target="_blank">i want hue</a></li>
+    </p>
         </div>
         <div class="col-md-4">
-            <h3>Theme Preview</h3>
+            <h4>Theme Preview</h4>
             <div id="chart"></div>
         </div>
     </div>
+    <h4>Final Theme</h4>
     <textarea id="output" rows="4" class="form-control col-xs-12"> </textarea>
     <button id="download" class="btn btn-primary">Download</button>
+
 </div>
 <!-- /main div -->
 </div>
