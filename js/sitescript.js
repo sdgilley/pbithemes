@@ -155,6 +155,7 @@ function generate() {
     newTmp.foreground = $.trim($("#fg").val());
     newTmp.tableAccent = $.trim($("#ta").val());
     $("#output").val(JSON.stringify(newTmp), null, '\t');
+
     // preview plot
     var data = [[["a",23],["b",8],["c",5],["d",25],["e",20],["f",17],["g",70],["h",25]]];
     var containerHeight = $("#chart").parent("div.container").height();
@@ -172,13 +173,14 @@ function generate() {
         height: containerHeight,
         }; 
     var plot = $.jqplot('chart', data, options);
+
     // style the table
     $('table tr').css("background-color",newTmp.background);
     $("table").css("color",newTmp.foreground);
-    $('table th').css("background-color",newTmp.tableAccent);
-    if (newTmp.tableAccent != newTmp.background) {
-        $('table th').css("color",newTmp.background);
-    }
+    $('table th').css("background-color",newTmp.foreground);
+    $('table th').css("color",newTmp.background);
+    $('.accent').css("background-color",newTmp.foreground);
+    $('.accent').css("color",newTmp.background);
 
 
 };

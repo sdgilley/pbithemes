@@ -10,12 +10,13 @@ body {
   text-align: left;
 }
 
-.btn-primary {
+
+  .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
   background-color: #000;
   border-color: #000;
    color: #F2C811;
 }
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
+.btn-primary {
   background-color: #F2C811;
   border-color: #F2C811;
    color: #000;
