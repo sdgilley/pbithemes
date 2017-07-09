@@ -5,14 +5,7 @@
 $(document).ready(function () {
     //initialize
     $('.choose').colorpicker();
-    var newthm = {"name":"newTheme",
-        "dataColors":["#333333", "#ababab"],
-        "background":"#FFFFFF",
-        "foreground":"#000000",
-        "tableAccent":"#FFFFFF"};
-    loadTheme(newthm);  // creates the text input cells and colors them
-    applyColors(); //make cells show their colors
-    generate(); //generate the json text area
+    newtheme();
     // //list of themes to choose
     var themes = {{ site.data | jsonify }};
      
@@ -54,6 +47,9 @@ $("#download").click(function () {
         "href": "data:text/plain;charset=utf-8," + encodeURIComponent(text),
         "download": fn
     });
+});
+$("#new").click(function () {
+    newtheme();
 });
 
 // addCell button adds another data cell
@@ -178,6 +174,16 @@ function generate() {
     var plot = $.jqplot('chart', data, options)
 
 };
+function newtheme (){
+    var newthm = {"name":"newTheme",
+        "dataColors":["#FFFFFF"],
+        "background":"#FFFFFF",
+        "foreground":"#000000",
+        "tableAccent":"#FFFFFF"};
+    loadTheme(newthm);  // creates the text input cells and colors them
+    applyColors(); //make cells show their colors
+    generate(); //generate the json text area
+}
 
 
 });
