@@ -1,7 +1,8 @@
 # pbithemes
 Visualize and modify Power BI Report Themes at https://sdgilley.github.io/pbithemes/
 
-This website uses the following opensource components:
+This website built with:
+
 * [Bootstrap v4.0.0-alpha.5](https://getbootstrap.com)
 * [Bootstrap Colorpicker 2.5.1 for Twitter Bootstrap](https://farbelous.github.io/bootstrap-colorpicker/)
 * [jQuery 3.2.1](https://jquery.com/)
