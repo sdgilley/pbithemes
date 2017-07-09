@@ -48,8 +48,12 @@ $("#themeName").change(function () {
 });
 
 $("#download").click(function () {
-    fn  = $("#themeName").val() +".json"
-    download(fn, $("#output").val);
+    var fn  = $("#themeName").val() +".json";
+    var text = $("#output").val();
+    $("#download").prop({
+        "href": "data:text/plain;charset=utf-8," + encodeURIComponent(text),
+        "download": fn
+    });
 });
 
 // addCell button adds another data cell
@@ -174,22 +178,6 @@ function generate() {
     var plot = $.jqplot('chart', data, options)
 
 };
-
-function download(filename, text) {
-    var pom = document.createElement('a');
-    pom.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
-    pom.setAttribute('download', filename);
-
-    if (document.createEvent) {
-        var event = document.createEvent('MouseEvents');
-        event.initEvent('click', true, true);
-        pom.dispatchEvent(event);
-    }
-    else {
-        pom.click();
-    }
-};
-     
 
 
 });
