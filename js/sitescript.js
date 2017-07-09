@@ -42,7 +42,8 @@ $("#themeName").change(function () {
 
 $("#download").click(function () {
     var fn  = $("#themeName").val() +".json";
-    var text = JSON.stringify($("#output").val());
+    var text = JSON.parse($("#output").val());
+    var text = JSON.stringify(text);
     $("#download").prop({
         "href": "data:text/plain;charset=utf-8," + encodeURIComponent(text),
         "download": fn
