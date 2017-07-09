@@ -166,12 +166,19 @@ function generate() {
                 startAngle: -90
             }},
         seriesColors: newTmp.dataColors,
-        textColor: newTmp.foreground,
-        grid: {shadow:false, backgroundColor: newTmp.background},
+        grid: {shadow:false, backgroundColor: "#ffffff"},
         legend:{ show:false },
         height: containerHeight,
         }; 
-    var plot = $.jqplot('chart', data, options)
+    var plot = $.jqplot('chart', data, options);
+    // style the table
+    $('table tr').css("background-color",newTmp.background);
+    $("table").css("color",newTmp.foreground);
+    $('table th').css("background-color",newTmp.tableAccent);
+    if (newTmp.tableAccent != newTmp.background) {
+        $('table th').css("color",newTmp.background);
+    }
+
 
 };
 function newtheme (){
