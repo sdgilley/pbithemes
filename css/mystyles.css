@@ -22,10 +22,15 @@ body {
    color: #000;
 }
 
-.navbar-inverse .navbar-brand{
-   color: #F2C811;
-
+.navbar-inverse {
+   background-color: #F2C811;
+   border-color:#F2C811;
+   color: #000;
   }
+  
+.navbar-inverse .navbar-brand {
+    color: #000;
+}  
    .panel-info > .panel-heading {
      background-color: #ddd;
      border-color: #ccc;
@@ -36,4 +41,7 @@ body {
    }
 .x {
     cursor:pointer;
+}
+table{
+  border-collapse: separate;
 }

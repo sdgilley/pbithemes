@@ -158,7 +158,6 @@ function generate() {
 
     // preview plot
     var data = [[["a",23],["b",8],["c",5],["d",25],["e",20],["f",17],["g",70],["h",25]]];
-    var containerHeight = $("#chart").parent("div.container").height();
     var options = {
         seriesDefaults:{
             shadow: false, 
@@ -168,20 +167,21 @@ function generate() {
                 startAngle: -90
             }},
         seriesColors: newTmp.dataColors,
-        grid: {shadow:false, backgroundColor: "#ffffff"},
+        grid: {shadow:false, backgroundColor: "#ffffff", borderColor: '#ffffff'},
         legend:{ show:false },
-        height: containerHeight,
+        height: "250px",
         }; 
     var plot = $.jqplot('chart', data, options);
 
     // style the table
-    $('table tr').css("background-color",newTmp.background);
-    $("table").css("color",newTmp.foreground);
-    $('table th').css("background-color",newTmp.foreground);
-    $('table th').css("color",newTmp.background);
-    $('.accent').css("background-color",newTmp.foreground);
-    $('.accent').css("color",newTmp.background);
-
+    $("table").css("color", newTmp.foreground);
+    $('table tr').css("background-color", newTmp.background)
+    $('table th').css("border-color", newTmp.tableAccent);
+    $('table th').css("background-color", newTmp.foreground);
+    $('table th').css("color", newTmp.background);
+    $('.accent').css("background-color", newTmp.foreground);
+    $('.accent').css("color", newTmp.background);
+    $('.accent').css("border-color", newTmp.tableAccent);
 
 };
 function newtheme (){
